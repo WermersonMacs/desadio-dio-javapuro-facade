@@ -1,22 +1,27 @@
-package subsistema2.cep;
+package subsistema2.cep; // Define o pacote do subsistema 2, relacionado à API de CEP
 
-public class CepApi {
+public class CepApi { // Declaração da classe CepApi
 
+    // Cria uma instância única da própria classe (implementação de singleton)
     private static CepApi instancia = new CepApi();
 
-    private CepApi(){
-        super();
+    // Construtor privado para impedir a criação de múltiplas instâncias
+    private CepApi() {
+        super(); // Chama o construtor da superclasse (Object)
     }
-    public static CepApi getInstancia(){
+
+    // Método público para acessar a instância única da classe
+    public static CepApi getInstancia() {
         return instancia;
     }
 
-    public String recuperarCidade(String cep){
+    // Método que simula a recuperação da cidade com base no CEP informado
+    public String recuperarCidade(String cep) {
         return "Missão Velha";
     }
-    public String recuperarEstado(String cep){
+
+    // Método que simula a recuperação do estado com base no CEP informado
+    public String recuperarEstado(String cep) {
         return "CE";
     }
-
-
 }
